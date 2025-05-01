@@ -6,7 +6,4 @@ class ColorsManager {
   static const Color colorSecondry = Color(0xFF110114);
   static const Color colorSecondry2 = Color(0xFF6D597A);
   static const Color accentColor =  Color(0xFFB56576);
-
-
-
 }

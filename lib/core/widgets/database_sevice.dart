@@ -42,10 +42,8 @@ class DatabaseService {
     final db = await database;
     final batch = db.batch();
 
-    // Clear existing products
     await db.delete(tableName);
 
-    // Insert new products
     for (var product in products) {
       batch.insert(
         tableName,
@@ -56,17 +54,6 @@ class DatabaseService {
 
     await batch.commit();
   }
-  Future<void> saveProduct({required ProductDetailsModel product}) async {
-    final db = await database;
-
-
-    await db.insert(
-      tableName,
-      product.toMap(),
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-  }
-
   Future<List<Product>> getProducts() async {
     final db = await database;
     final maps = await db.query(tableName);

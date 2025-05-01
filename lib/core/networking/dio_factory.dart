@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import '../helpers/shared_pref_helper.dart';
 import 'api_networking.dart';
 
 class DioFactory {
@@ -52,7 +51,7 @@ class DioFactory {
             await _handleUnauthorized();
           }
           else{
-            print("errrorr ${error.response!.statusCode}");
+            print("errrorr ${error.response?.statusCode}");
           }
           return handler.next(error);
         },
@@ -62,7 +61,7 @@ class DioFactory {
 
   static Future<void> _handleUnauthorized() async {
     // امسح التوكن أو اي بيانات محفوظة
-    await SharedPrefHelper.clearData();
+    // await SharedPrefHelper.clearData();
 
     // روح على صفحة اللوجين
     print("logggggg out");

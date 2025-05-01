@@ -130,9 +130,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                             Description(
                               product: product,
                             ),
-
                             SizedBox(height: 36.h),
-
                             // Add to cart button
                             const AddToCartButton(),
                             SizedBox(height: 24.h),
