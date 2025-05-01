@@ -10,8 +10,8 @@ class CustomShimmerProductsEffect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor:  ColorsManager.colorPrimary, // Your specified color
-      highlightColor:  ColorsManager.colorPrimary.withOpacity(0.3), // Lier version for shimmer
+      baseColor:  ColorsManager.colorSecondry, // Your specified color
+      highlightColor:  ColorsManager.colorSecondry.withOpacity(0.3), // Lier version for shimmer
       period: const Duration(milliseconds: 1500), // Animation duration
       child: Padding(
         padding: const EdgeInsets.all(8.0),

@@ -57,39 +57,44 @@ class ProductsScreen extends StatelessWidget {
                 ),
               );
             }
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Column(
-                children: [
-                  Expanded(
-                    child: GridView.builder(
-                      padding: const EdgeInsets.all(16),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 0.75,
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
+            return RefreshIndicator(
+              onRefresh: ()async {
+                productCubit.getProducts();
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: GridView.builder(
+                        padding: const EdgeInsets.all(16),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          childAspectRatio: 0.75,
+                          crossAxisSpacing: 16,
+                          mainAxisSpacing: 16,
+                        ),
+                        itemCount: products.length,
+                        itemBuilder: (context, index) {
+                          final product = products[index];
+                          return ProductCard(
+                            product: product,
+                            onTap: () {
+                              context.pushNamed(
+                                Routes.productDetailsScreen,
+                                arguments: {
+                                  'productId': product.id,
+                                  'cubit': productCubit,
+                                },
+                              );
+                            },
+                          );
+                        },
                       ),
-                      itemCount: products.length,
-                      itemBuilder: (context, index) {
-                        final product = products[index];
-                        return ProductCard(
-                          product: product,
-                          onTap: () {
-                            context.pushNamed(
-                              Routes.productDetailsScreen,
-                              arguments: {
-                                'productId': product.id,
-                                'cubit': productCubit,
-                              },
-                            );
-                          },
-                        );
-                      },
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },

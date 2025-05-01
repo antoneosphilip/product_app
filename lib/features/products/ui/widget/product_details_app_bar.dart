@@ -16,7 +16,7 @@ class ProductDetailsAppBar extends StatelessWidget {
       expandedHeight: 350,
       floating: false,
       pinned: true,
-      backgroundColor: ColorsManager.colorSecondry,
+      backgroundColor: ColorsManager.colorPrimary,
       flexibleSpace: FlexibleSpaceBar(
         background: Container(
           decoration: BoxDecoration(

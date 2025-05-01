@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:either_dart/either.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:products_app/core/widgets/flutter_show_toast.dart';
 import 'package:products_app/features/products/data/models/get_products_model.dart';
 
 import '../../../../core/widgets/database_sevice.dart';

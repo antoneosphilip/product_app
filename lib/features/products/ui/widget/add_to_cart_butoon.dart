@@ -13,7 +13,7 @@ class AddToCartButton extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            color: ColorsManager.colorSecondry.withOpacity(0.1),
+            color: ColorsManager.colorPrimary.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: IconButton(
@@ -27,7 +27,7 @@ class AddToCartButton extends StatelessWidget {
             },
             icon: const Icon(
               Icons.compare_arrows,
-              color: ColorsManager.colorSecondry,
+              color: ColorsManager.colorPrimary,
             ),
           ),
         ),
@@ -44,14 +44,14 @@ class AddToCartButton extends StatelessWidget {
               );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: ColorsManager.colorSecondry,
+              backgroundColor: ColorsManager.colorPrimary,
               foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
               elevation: 8,
-              shadowColor: ColorsManager.colorSecondry.withOpacity(0.5),
+              shadowColor: ColorsManager.colorPrimary.withOpacity(0.5),
             ),
             child: const Text(
               'ADD TO CART',

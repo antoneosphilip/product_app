@@ -62,20 +62,20 @@ class TextStyles {
     color: Colors.white,
   );
   static TextStyle font24ExtraBold= TextStyle(
-    color: ColorsManager.colorSecondry,
+    color: ColorsManager.colorPrimary,
     fontSize: 24.sp,
     fontWeight: FontWeight.bold,
     height: 1.2.h,
   );
   static TextStyle font20ExtraBold= TextStyle(
-    color: ColorsManager.colorSecondry,
+    color: ColorsManager.colorPrimary,
     fontSize: 20.sp,
     fontWeight: FontWeight.bold,
   );
   static TextStyle font16Regular= TextStyle(
       fontSize: 16,
       height: 1.5,
-      color: ColorsManager.colorSecondry.withOpacity(0.8)
+      color: ColorsManager.colorPrimary.withOpacity(0.8)
   );
   static TextStyle font32WhiteInter = TextStyle(
     fontSize: 32.sp,
